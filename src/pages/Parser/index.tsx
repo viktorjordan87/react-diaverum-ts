@@ -3,7 +3,6 @@ import { FileUpload } from "@/components/FileUpload";
 import { parseTextToArray } from "@/utils/parseTextToArray";
 import { Button, Table } from "antd";
 import { toast } from "react-hot-toast";
-import { set } from "zod";
 
 export const Parser = () => {
   //File upload state
@@ -89,6 +88,7 @@ export const Parser = () => {
             dataSource={results}
             columns={columns}
             className="overflow-auto"
+            rowKey="BARCODE"
           />
           {isError && <p className="text-red-500">Error parsing file(s)</p>}
           <h2 className="text-2xl font-bold mt-8 mb-4">
