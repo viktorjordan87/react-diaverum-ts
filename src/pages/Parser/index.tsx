@@ -81,9 +81,7 @@ export const Parser = () => {
       />
       {results.length > 0 && files.length > 0 && (
         <div>
-          <h2 className="text-2xl font-bold mt-8 mb-4">
-            Step 2: Content of the File
-          </h2>
+          <h2 className="text-2xl font-bold mt-8 mb-4">Step 2: Lab results</h2>
           <Table
             dataSource={results}
             columns={columns}
@@ -98,7 +96,7 @@ export const Parser = () => {
             type="primary"
             className="mb-20"
             onClick={() => {
-              console.log("Upload Results to Backend");
+              console.log("Upload Results to Backend", results);
               toast.success("Results uploaded successfully");
               setResults([]); // Clear results after upload
               setFiles([]); // Clear files after upload
